@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://robiavec-tech.github.io/playzoonn/sitemap.xml

@@ -1,0 +1,35 @@
+/* PLAYZOONN visual system — shared across all web pages */
+:root{color-scheme:dark;--bg:#080b18;--panel:#141a30;--card:#191e36;--line:#353957;--edge:#353957;--accent:#b5a1ff;--purple:#b5a1ff;--muted:#b9bfd3;--white:#f7f5ff}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(ellipse 75% 520px at 52% -90px,#42306e 0%,#19162f 51%,#080b18 100%)!important;color:#f7f5ff;letter-spacing:.005em}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 90% 30%,#8462d00c,transparent 35%)}
+header,.top{background:#0b0d1eea!important;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid #ffffff1b!important;box-shadow:0 5px 24px #0002}
+.brand,.logo{color:#c6b4ff!important;letter-spacing:.045em!important;text-shadow:0 0 26px #8b6be53d}
+h1{font-weight:850!important;letter-spacing:-.047em;line-height:1.13!important;color:#f7f4ff!important;text-wrap:balance}
+h2{letter-spacing:-.025em;color:#f7f4ff}
+h3{letter-spacing:-.015em}
+p{line-height:1.65}
+a{transition:color .18s ease,opacity .18s ease}
+a:hover{color:#f0eaff}
+button,.btn,input,select,textarea{transition:background .18s ease,border-color .18s ease,box-shadow .18s ease,transform .18s ease}
+button:hover:not(:disabled),.btn:hover{border-color:#b7a0ff!important}
+button:active:not(:disabled){transform:scale(.985)}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #d7c5ff!important;outline-offset:3px}
+input,select,textarea{background:#24263f!important;border:1px solid #686184!important;color:#faf8ff!important}
+input::placeholder,textarea::placeholder{color:#b9b4cb}
+input:focus,select:focus,textarea:focus{border-color:#c5aeff!important;box-shadow:0 0 0 3px #a987ff22}
+.panel,.card,.resource-card,.category-card,.mini-dock{background:linear-gradient(155deg,#20243d,#151a2e 80%)!important;border:1px solid #5d557b88!important;box-shadow:0 10px 32px #03041026;border-radius:18px!important}
+.panel:hover,.card:hover,.resource-card:hover,.category-card:hover{border-color:#8975bd9e!important}
+.primary,.btn:not(.secondary),button[aria-selected=true],button[aria-pressed=true],.tab[aria-selected=true],.chip[aria-pressed=true]{background:linear-gradient(115deg,#7555bc,#5e46a4)!important;color:#fff!important;border-color:#a38be1!important}
+.primary:hover,.btn:not(.secondary):hover{box-shadow:0 6px 24px #825ce444}
+.tab,.chip,.secondary,.btn.secondary{background:#26233e!important;border-color:#6e648d!important}
+.tab:hover,.chip:hover{background:#393052!important}
+.notice{background:#9c80ee0c!important;border-left-color:#b69dff!important;border-radius:0 10px 10px 0}
+.tag,.pill,.badge{border-color:#8271a5!important}
+.map{border-color:#71688f!important;box-shadow:inset 0 0 55px #0003}
+.maptools{row-gap:10px}
+.maptools button{background:#282440!important}
+.maptools button[aria-pressed=true]{background:#6d51b1!important}
+.footer,footer{border-top-color:#ffffff24!important}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+@media(max-width:640px){h1{letter-spacing:-.035em}.panel,.card{border-radius:14px!important}header nav{row-gap:8px}}

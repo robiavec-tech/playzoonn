@@ -1,35 +1,46 @@
-/* PLAYZOONN visual system — shared across all web pages */
-:root{color-scheme:dark;--bg:#080b18;--panel:#141a30;--card:#191e36;--line:#353957;--edge:#353957;--accent:#b5a1ff;--purple:#b5a1ff;--muted:#b9bfd3;--white:#f7f5ff}
+/* PLAYZOONN — cinematic neo-noir / futuristic city design system
+   Original visual identity drawing on atmospheric sci-fi, no movie assets. */
+:root{color-scheme:dark;--bg:#08090e;--panel:#11151d;--card:#151821;--line:#42404a;--edge:#42404a;--accent:#ffb071;--purple:#ffb071;--muted:#b9b8c2;--white:#f7f1ec;--orange:#ff9252;--pink:#ef68b8;--cyan:#8bdfe4}
+*{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:radial-gradient(ellipse 75% 520px at 52% -90px,#42306e 0%,#19162f 51%,#080b18 100%)!important;color:#f7f5ff;letter-spacing:.005em}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 90% 30%,#8462d00c,transparent 35%)}
-header,.top{background:#0b0d1eea!important;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid #ffffff1b!important;box-shadow:0 5px 24px #0002}
-.brand,.logo{color:#c6b4ff!important;letter-spacing:.045em!important;text-shadow:0 0 26px #8b6be53d}
-h1{font-weight:850!important;letter-spacing:-.047em;line-height:1.13!important;color:#f7f4ff!important;text-wrap:balance}
-h2{letter-spacing:-.025em;color:#f7f4ff}
-h3{letter-spacing:-.015em}
-p{line-height:1.65}
-a{transition:color .18s ease,opacity .18s ease}
-a:hover{color:#f0eaff}
-button,.btn,input,select,textarea{transition:background .18s ease,border-color .18s ease,box-shadow .18s ease,transform .18s ease}
-button:hover:not(:disabled),.btn:hover{border-color:#b7a0ff!important}
+body{background:radial-gradient(ellipse 72% 540px at 78% -8%,#ac4b3954,transparent 75%),radial-gradient(ellipse 58% 680px at -8% 34%,#77366b3b,transparent 78%),linear-gradient(145deg,#100e16 0%,#090a10 48%,#0b1119 100%)!important;color:#f7f1ec!important;letter-spacing:.012em;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,transparent 49.9%,#ffffff05 50%,transparent 50.1%),repeating-linear-gradient(0deg,transparent 0 95px,#ffffff05 96px),radial-gradient(circle at 78% 55%,#d8582915,transparent 40%);opacity:.65}
+body:after{content:"";position:fixed;inset:0;z-index:20;pointer-events:none;background:repeating-linear-gradient(0deg,#00000009 0 1px,transparent 1px 5px);opacity:.23}
+header,.top{background:#090b13dd!important;backdrop-filter:blur(22px) saturate(120%);-webkit-backdrop-filter:blur(22px) saturate(120%);border-bottom:1px solid #f6ad7950!important;box-shadow:0 8px 42px #0008}
+.brand,.logo{font-family:Impact,"Arial Narrow",system-ui,sans-serif!important;font-weight:900!important;letter-spacing:.15em!important;color:#ffe0bd!important;text-shadow:0 0 25px #ff7d4577,0 0 70px #f77e4235;text-transform:uppercase}
+h1{font-family:Impact,"Arial Narrow",system-ui,sans-serif!important;font-weight:850!important;font-stretch:condensed;letter-spacing:.025em!important;line-height:1.06!important;color:#fff2e4!important;text-wrap:balance;text-shadow:0 5px 38px #ff8b5a32}
+h2{letter-spacing:.012em!important;color:#ffe7d1!important}
+h3{letter-spacing:.005em!important;color:#f9f0e9}
+p{line-height:1.68}
+.eyebrow,.kicker,.pill{color:#ffb784!important;letter-spacing:.22em!important;text-transform:uppercase}
+a{color:#ffc39b;transition:color .2s ease,opacity .2s ease}
+a:hover{color:#ffe6c8}
+nav a:not(.brand):not(.logo),.nav a:not(.logo){transition:color .2s ease,text-shadow .2s ease}
+nav a:hover,.nav a:hover{text-shadow:0 0 14px #ff955f77}
+button,.btn,input,select,textarea{transition:background .2s ease,border-color .2s ease,box-shadow .2s ease,transform .2s ease}
+button:hover:not(:disabled),.btn:hover{border-color:#ffc093!important}
 button:active:not(:disabled){transform:scale(.985)}
-button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #d7c5ff!important;outline-offset:3px}
-input,select,textarea{background:#24263f!important;border:1px solid #686184!important;color:#faf8ff!important}
-input::placeholder,textarea::placeholder{color:#b9b4cb}
-input:focus,select:focus,textarea:focus{border-color:#c5aeff!important;box-shadow:0 0 0 3px #a987ff22}
-.panel,.card,.resource-card,.category-card,.mini-dock{background:linear-gradient(155deg,#20243d,#151a2e 80%)!important;border:1px solid #5d557b88!important;box-shadow:0 10px 32px #03041026;border-radius:18px!important}
-.panel:hover,.card:hover,.resource-card:hover,.category-card:hover{border-color:#8975bd9e!important}
-.primary,.btn:not(.secondary),button[aria-selected=true],button[aria-pressed=true],.tab[aria-selected=true],.chip[aria-pressed=true]{background:linear-gradient(115deg,#7555bc,#5e46a4)!important;color:#fff!important;border-color:#a38be1!important}
-.primary:hover,.btn:not(.secondary):hover{box-shadow:0 6px 24px #825ce444}
-.tab,.chip,.secondary,.btn.secondary{background:#26233e!important;border-color:#6e648d!important}
-.tab:hover,.chip:hover{background:#393052!important}
-.notice{background:#9c80ee0c!important;border-left-color:#b69dff!important;border-radius:0 10px 10px 0}
-.tag,.pill,.badge{border-color:#8271a5!important}
-.map{border-color:#71688f!important;box-shadow:inset 0 0 55px #0003}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #90e5e8!important;outline-offset:3px}
+input,select,textarea{background:#141822ee!important;border:1px solid #75616a!important;color:#fff5ec!important;box-shadow:inset 0 1px 4px #0004}
+input::placeholder,textarea::placeholder{color:#bcb4b9}
+input:focus,select:focus,textarea:focus{border-color:#ffa46f!important;box-shadow:0 0 0 3px #ff955f2b}
+.panel,.card,.resource-card,.category-card,.mini-dock{position:relative;background:linear-gradient(145deg,#26202aef 0%,#171922ed 48%,#101721f0 100%)!important;border:1px solid #a17a795e!important;box-shadow:0 18px 48px #0007,inset 0 1px #ffffff0b;border-radius:12px!important}
+.panel:hover,.card:hover,.resource-card:hover,.category-card:hover{border-color:#e4a17a9c!important;box-shadow:0 18px 54px #0009,0 0 28px #ff87591a}
+.primary,.btn:not(.secondary),button[aria-selected=true],button[aria-pressed=true],.tab[aria-selected=true],.chip[aria-pressed=true]{background:linear-gradient(110deg,#d16b42,#9f4865)!important;color:#fff8f3!important;border-color:#f2a27a!important;box-shadow:0 5px 22px #b54b4036}
+.primary:hover,.btn:not(.secondary):hover{box-shadow:0 6px 32px #ff825452}
+.tab,.chip,.secondary,.btn.secondary{background:#211c28f2!important;border-color:#876776!important;color:#f4e7e2!important}
+.tab:hover,.chip:hover{background:#342433!important}
+.notice{background:linear-gradient(90deg,#e37b3a14,transparent)!important;border-left-color:#ff9d62!important;border-radius:0 8px 8px 0;color:#d6c9c4}
+.tag,.pill,.badge{border-color:#b77d77!important;color:#ffd1ad!important}
+.map{border-color:#a27a7d!important;background:radial-gradient(ellipse at 25% 25%,#374b53,#1d2933 68%,#1b1a28)!important;box-shadow:inset 0 0 80px #0008,0 0 34px #ff8e5510}
 .maptools{row-gap:10px}
-.maptools button{background:#282440!important}
-.maptools button[aria-pressed=true]{background:#6d51b1!important}
-.footer,footer{border-top-color:#ffffff24!important}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
-@media(max-width:640px){h1{letter-spacing:-.035em}.panel,.card{border-radius:14px!important}header nav{row-gap:8px}}
+.maptools button{background:#231d2a!important;border-color:#916c77!important}
+.maptools button[aria-pressed=true]{background:linear-gradient(110deg,#c46b47,#994965)!important}
+.pin{background:#bd624b!important}
+.pin.active{background:#f1b56b!important;box-shadow:0 0 0 5px #ffac6855,0 0 24px #fba060a8!important}
+.marker-details{background:#211c27!important;border-color:#a17877!important}
+.footer,footer{border-top-color:#f0aa7c30!important}
+::selection{background:#a65a54;color:#fff}
+@media(min-width:850px){h1{font-size:clamp(48px,6vw,86px)!important}.hero{padding-top:45px!important;padding-bottom:40px!important}}
+@media(max-width:640px){h1{letter-spacing:.012em!important}.panel,.card{border-radius:11px!important}header nav{row-gap:8px}.brand,.logo{letter-spacing:.1em!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
